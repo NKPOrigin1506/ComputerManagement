@@ -26,8 +26,8 @@ namespace ManagementStore.Form.User
 
         private void LoginUser_Load(object sender, EventArgs e)
         {
-            txtInputPassword.Text = "thien123";
             txtInputUsername.Text = "ngocthien";
+            txtInputPassword.Text = "thien123";
             radioBtnStaff.Checked = true;
             string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
@@ -49,22 +49,7 @@ namespace ManagementStore.Form.User
                     var userAccessRole = userServices.GetListUserAccessMenus(appUser.Id);
 
                     Main main = new Main();
-                    main.gridGroupRole.DataSource = groupAccessRole;
-                    main.gridUserRole.DataSource = userAccessRole;
-
-                    main.barBtnCreateProduct.Enabled = groupAccessRole[0].CreateYN;
-                    main.barBtnEditProduct.Enabled = groupAccessRole[0].EditYN;
-                    main.barBtnDeleteProduct.Enabled = groupAccessRole[0].DeleteYN;
-                    main.barBtnSearchProduct.Enabled = groupAccessRole[0].SearchYN;
-                    main.barBtnSaveProduct.Enabled = groupAccessRole[0].SaveYN;
-                    main.barBtnPrintProduct.Enabled = groupAccessRole[0].PrintYN;
-
-                    main.barBtnDeleteSale.Enabled = userAccessRole[0].DeleteYN;
-                    main.barBtnSaveSale.Enabled = userAccessRole[0].SaveYN;
-                    main.barBtnPrintSale.Enabled = userAccessRole[0].PrintYN;
-
-                    main.labelUsername.Text = "Wellcome " + appUser.Firstname + " " + appUser.Lastname;
-      
+     
 
                     main.Show();
                     Hide();
