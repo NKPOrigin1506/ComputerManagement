@@ -206,8 +206,8 @@ namespace ManagementStore.Form.User
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
+            this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.labelPhone);
